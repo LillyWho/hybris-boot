@@ -1840,6 +1840,16 @@ case "$DEVICE" in
             -e 's block/bootdevice/by-name/fsg mmcblk0p33 ' \
             "$@"
         ;;
+    "tissot")
+        sed -i \
+            -e 's block/bootdevice/by-name/system mmcblk0p54 ' \
+            -e 's block/bootdevice/by-name/userdata mmcblk0p49 ' \
+            -e 's block/bootdevice/by-name/persist mmcblk0p27 ' \
+            -e 's block/bootdevice/by-name/dsp mmcblk0p13 ' \
+            -e 's block/bootdevice/by-name/modem mmcblk0p1 ' \
+            -e 's block/bootdevice/by-name/fsg mmcblk0p17 ' \
+            "$@"
+        ;;
 
     *)
         cat <<EOF
